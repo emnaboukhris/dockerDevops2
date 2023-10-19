@@ -10,7 +10,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 // Construire l'image Docker
-                sh 'docker build -t mon-app .'
+                sh 'docker build -t item_service_image .'
             }
         }
         stage('Push to Docker Hub') {
