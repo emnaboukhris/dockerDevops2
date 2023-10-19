@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Récupérer le code depuis GitHub
-                checkout([$class: 'GitSCM', branches: [[name: 'main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/votre-utilisateur/votre-repo.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: 'master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/emnaboukhris/dockerDevops2']]])
             }
         }
         stage('Build Docker Image') {
